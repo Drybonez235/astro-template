@@ -1,17 +1,25 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
 
+import exampleimg from '../assets/images/favicon.svg'
+import '../styles/global.css';  
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout 
+  title="Home Page" 
+  description="Welcome to my lightning fast website built with Astro."
+  image="/images/home-og.jpg"
+>
+  <main>
+    <h1 class="text-center" >Welcome to my new site!</h1>
+	<Image 
+        src={exampleimg} 
+        alt="Gallery submission"
+		priority
+		fit="'contain' | 'cover' | 'fill' | 'none' | 'scale-down'"
+		position='center or other css options'
+      />
+  </main>
+</BaseLayout>
+
