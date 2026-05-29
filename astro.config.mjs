@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from "@tailwindcss/vite";
 //npm install tailwindcss @tailwindcss/vite
+//npm install -D @tailwindcss/typography
 
 import sitemap from '@astrojs/sitemap';
 //npm run astro add sitemap
