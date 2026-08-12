@@ -27,6 +27,22 @@ interface Props {
   businessInfo?: BusinessInfo;
 }
 
+// 1. Initialize your default business object HERE inside the component
+const DEFAULT_BUSINESS_INFO: BusinessInfo = {
+  name: 'Christ For Life',
+  url: 'https://cflmc.org/',
+  logo: '/favicon.svg',
+  description: 'Christ for Life motorcycle club exists with the purpose of reaching the motorcycle community with the saving knowledge and love of Jesus Christ.',
+  telephone: '7739832677',
+  address: {
+    streetAddress: '6156 W Grand Ave',
+    addressLocality: 'Chicago',
+    addressRegion: 'IL',
+    postalCode: '60634',
+    addressCountry: 'US',
+  },
+};
+
 const {
   title = SITE_DEFAULT_TITLE,
   description = SITE_DEFAULT_DESC,
